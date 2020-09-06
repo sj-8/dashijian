@@ -14,7 +14,7 @@
     <div class="layui-card">
         <div class="layui-card-header">
             <span>文章类别管理</span>
-
+            <button type="button" class="layui-btn layui-btn-normal layui-btn-sm">添加类别</button>
         </div>
         <div class="layui-card-body">
             <table class="layui-table">
@@ -43,7 +43,25 @@
             </table>
         </div>
     </div>
+    <script type="html/text" id="tpl-table">
+        {{each data}}
+        <tr>
+            <td>{{$value.name}}</td>
+            <td>{{$value.alias}}</td>
+            <td>
+                <button type="button" class="layui-btn layui-btn-xs">编辑</button>
+                <button type="button" class="layui-btn layui-btn-danger layui-btn-xs">删除</button>
+            </td>
+        </tr>
+        {{/each}}
+    </script>
 </body>
-<script type="html/text" id=""></script>
+<script src="/assets/lib/jquery.js"></script>
+<script src="/assets/lib/layui/layui.all.js"></script>
+<script src="/assets/lib/template-web.js"></script>
+<!-- 引入定义的预定义地址根地址函数采用ajaxPrefilter方法 -->
+<script src="/assets/js/prefilter.js"></script>
+<!-- 自己的js -->
+<script src="/assets/js/article/art_cate.js"></script>
 
 </html>
