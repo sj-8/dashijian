@@ -49,7 +49,6 @@ $(function () {
                 $('#link_login').click()
             }
         });
-
     })
     // 登录的接口的调用
     $('#form_login').on('submit', function (e) {
