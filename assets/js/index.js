@@ -50,7 +50,7 @@ function renderAvatar(userformation) {
     $('#welcome').html('欢迎&nbsp;&nbsp;' + name)
     if (userformation.user_pic !== null) {
         $('.layui-nav-img')
-            .attr('src', user.user_pic)
+            .attr('src', userformation.user_pic)
             .show()
         $('.text-avatar').hide()
     } else {
